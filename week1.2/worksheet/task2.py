@@ -2,8 +2,19 @@
 from util import read_numbers
 
 numbers = read_numbers()
-if numbers.isdigit():
-    numbers = float(numbers)
-    print("Digits read")
+max_num = max(numbers)
+min_num = min(numbers)
+average = sum(numbers) / len(numbers)
+
+numbers.sort()
+length = len(numbers)
+
+if length % 2 == 1:
+    median = numbers[length // 2]
 else:
-    print("Error: no numbers provided")
+    median = (numbers[length // 2 - 1] + numbers[length // 2]) / 2
+
+print(f"Maximum number is {max_num}")
+print(f"Minimum number is {min_num}")
+print(f"Mean number is {average}")
+print(f"Median number is {median}")
