@@ -8,9 +8,12 @@
 # calculate the number of words
 # hint: you could use .split() to break up by spaces
 # hint: watch out for empty lines that might give you empty strings
-
+with open("glasses.txt", "r") as file:
+    content = file.read()
+    words = content.split()
+    word_count = len(words)
 # display the wordcount
-
+print("Number of words: ", word_count)
 # Here are the word counts you should get:
 # story.txt - 290
 # story2.txt - 326
