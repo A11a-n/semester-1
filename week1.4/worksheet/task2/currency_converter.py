@@ -6,7 +6,7 @@
     other than any provided template code, was written and developed by
     you independently.
 
-    Name:
+    Name: Allan Aliko Mwambela
 """
 
 def currency_converter(amount, from_currency, to_currency):
@@ -19,8 +19,15 @@ def currency_converter(amount, from_currency, to_currency):
     }
 
     # your code here
+    if amount < 0:
+        return 0.0
 
-    return None
+    if from_currency == to_currency:
+        return round(float(amount), 2)
+
+    converted_amount = amount * conversion_rate[from_currency][to_currency]
+    
+    return round(float(converted_amount), 2)
 
 # Submit only this file currency_converter.py with the completed function.
 
